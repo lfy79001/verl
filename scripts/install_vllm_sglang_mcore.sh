@@ -41,12 +41,6 @@ if [ $USE_MEGATRON -eq 1 ]; then
 fi
 
 
-echo "5. May need to fix opencv"
-pip install opencv-python
-pip install opencv-fixer && \
-    python -c "from opencv_fixer import AutoFix; AutoFix()"
-
-
 if [ $USE_MEGATRON -eq 1 ]; then
     echo "6. Install cudnn python package (avoid being overridden)"
     pip install nvidia-cudnn-cu12==9.10.2.21
